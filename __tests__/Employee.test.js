@@ -1,9 +1,9 @@
 const Employee = require('../lib/Employee');
 
 // from module 
-test('creates a health potion object', () => {
-    const potion = new Potion('health');
+test('create an employee object', () => {
+    const employee = new Employee('name');
   
-    expect(potion.name).toBe('health');
-    expect(potion.value).toEqual(expect.any(Number));
+    expect(employee.name).toBe('name');
+    // expect(employee.value).toEqual(expect.any(Number));  not needed now value will be id or email 
   });
