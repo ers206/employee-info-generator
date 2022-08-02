@@ -1,8 +1,11 @@
 const Engineer = require('../lib/Engineer');
 
-test('creates a health potion object', () => {
-    const potion = new Potion('health');
+test('create an engineer object', () => {
+  const engineer = new Engineer('name');
+
+  expect(engineer.name).toBe('name');
+  expect(engineer.id).toBe('id');  
+  expect(engineer.email).toBe('email');  
+  expect(engineer.github).toBe('github');  
   
-    expect(potion.name).toBe('health');
-    expect(potion.value).toEqual(expect.any(Number));
-  });
+});

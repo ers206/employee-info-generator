@@ -1,8 +1,11 @@
-const Intern = require('../lib/Intern');
+const Intern = require('../lib/Intern'); 
 
-test('creates a health potion object', () => {
-    const potion = new Potion('health');
+test('create an intern object', () => {
+  const intern = new Intern('name');
+
+  expect(intern.name).toBe('name');
+  expect(intern.id).toBe('id');  
+  expect(intern.email).toBe('email');  
+  expect(intern.school).toBe('school');  
   
-    expect(potion.name).toBe('health');
-    expect(potion.value).toEqual(expect.any(Number));
-  });
+});

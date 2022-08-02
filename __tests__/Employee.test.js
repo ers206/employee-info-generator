@@ -5,5 +5,6 @@ test('create an employee object', () => {
     const employee = new Employee('name');
   
     expect(employee.name).toBe('name');
-    // expect(employee.value).toEqual(expect.any(Number));  not needed now value will be id or email 
+    expect(employee.id).toBe('id');  
+    // not needed now value will be id or email 
   });
