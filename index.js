@@ -1,47 +1,49 @@
-// const inquirer = require('inquirer'); 
+const inquirer = require('inquirer'); 
 
-// const promptUser = () => {
-//     return inquirer.prompt([
-//       {
-//         type: 'input',
-//         name: 'name',
-//         message: 'What is your name? (Required)',
-//         validate: nameInput => {
-//           if (nameInput) {
-//             return true;
-//           } else {
-//             console.log('Please enter your name!');
-//             return false;
-//           }
-//         }
-//       },
-//       {
-//         type: 'input',
-//         name: 'github',
-//         message: 'Enter your GitHub Username (Required)',
-//         validate: githubInput => {
-//           if (githubInput) {
-//             return true;
-//           } else {
-//             console.log('Please enter your GitHub username!');
-//             return false;
-//           }
-//         }
-//       },
-//       {
-//         type: 'confirm',
-//         name: 'confirmAbout',
-//         message: 'Would you like to enter some information about yourself for an "About" section?',
-//         default: true
-//       },
-//       {
-//         type: 'input',
-//         name: 'about',
-//         message: 'Provide some information about yourself:',
-//         when: ({ confirmAbout }) => confirmAbout
-//       }
-//     ]);
-//   };
+const promptUser = () => {
+    return inquirer.prompt([
+      {
+        type: 'input',
+        name: 'name',
+        message: 'What is the managers name?',
+        validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('Please enter managers name');
+            return false;
+          }
+        }
+      },
+      {
+        type: 'input',
+        name: 'id',
+        message: 'enter managers id number',
+        validate: idInput => {
+          if (idInput) {
+            return true;
+          } else {
+            console.log('Please enter managers id');
+            return false;
+          }
+        }
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'enter managers email',
+       
+      },
+      {
+        type: 'input',
+        name: 'officeNumber',
+        message: 'Please enter managers office number',
+       
+      }
+      
+    ]);
+  };
+  promptUser()
 
 
 //   GIVEN a command-line application that accepts user input
