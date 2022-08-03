@@ -14,7 +14,7 @@ test('making sure that the name property matches the input', () => {
   expect(manager.getName()).toBe("James")
 });
 
-test('making sure that the object created is classified as an Intern', () => {
+test('making sure that the object created is classified as an manager', () => {
   const manager = new Manager();
 
   expect(manager.getRole()).toBe("Manager")

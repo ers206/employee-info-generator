@@ -1,16 +1,17 @@
 const inquirer = require('inquirer'); 
 
+// Start with asking what type of employee Engineer, Intern, Manager or start with name ide and email
 const promptUser = () => {
     return inquirer.prompt([
       {
         type: 'input',
         name: 'name',
-        message: 'What is the managers name?',
+        message: 'What is the employees name?',
         validate: nameInput => {
           if (nameInput) {
             return true;
           } else {
-            console.log('Please enter managers name');
+            console.log('Please enter employees name');
             return false;
           }
         }
@@ -18,12 +19,12 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'id',
-        message: 'enter managers id number',
+        message: 'enter employees id number',
         validate: idInput => {
           if (idInput) {
             return true;
           } else {
-            console.log('Please enter managers id');
+            console.log('Please enter employee id');
             return false;
           }
         }
@@ -31,15 +32,33 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'email',
-        message: 'enter managers email',
-       
+        message: 'enter employees email',
+        validate: emailInput => {
+            if (emailInput) {
+              return true;
+            } else {
+              console.log('Please enter employees email');
+              return false;
+            }
+          }
       },
       {
-        type: 'input',
-        name: 'officeNumber',
-        message: 'Please enter managers office number',
-       
+        type: 'list',
+        name: 'role',
+        message: 'What is the employees role?',
+        choices: ["Intern", "engineer", "manager" ],
+        validate: officeNumberInput => {
+            if (officeNumberInput) {
+              return true;
+            } else {
+              console.log('Please enter the employees role');
+              return false;
+            }
+          }
       }
+      
+    //   then have questions pertaining to waht role they are in ...interns will be asked what school they attended, managers what store they are running... 
+
       
     ]);
   };
