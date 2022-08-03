@@ -1,12 +1,22 @@
 const Engineer = require('../lib/Engineer');
 
-test('create an engineer object', () => {
-  const engineer = new Engineer('name');
+test('create engineer object', () => {
+  const engineer = new Engineer();
 
-  expect(engineer.name).toBe('name');
+  expect(typeof(engineer)).toBe("object")
   
-  // expect(engineer.id).toBe('id');  
-  // expect(engineer.email).toBe('email');  
-  // expect(engineer.github).toBe('github');  
+});
+
+test('making sure that the name property matches the input', () => {
+  const engineer = new Engineer("James");
+
+  expect(engineer.name).toBe("James")
+  expect(engineer.getName()).toBe("James")
+});
+
+test('making sure that the object created is classified as an engineer', () => {
+  const engineer = new Engineer();
+
+  expect(engineer.getRole()).toBe("Engineer")
   
 });

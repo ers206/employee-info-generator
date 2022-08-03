@@ -1,10 +1,23 @@
 const Employee = require('../lib/Employee');
 
-// from module 
+ 
 test('create an employee object', () => {
-    const employee = new Employee('Billy Jean');
+  const intern = new Employee();
+
+  expect(typeof(employee)).toBe("object")
   
-    expect(employee.name).toBe('Billy Jean');
-    
+});
+
+  test('making sure that the name property matches the input', () => {
+    const employee = new Employee("James");
+  
+    expect(employee.name).toBe("James")
+    expect(employee.getName()).toBe("James")
+  });
+  
+  test('making sure that the object created is classified as an employee', () => {
+    const employee = new Employee();
+  
+    expect(employee.getRole()).toBe("Employee")
     
   });
